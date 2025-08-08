@@ -1,5 +1,4 @@
 vpc_id        = "vpc-06fe4f366ed34013b"
 instance_type = "t2.large"
-ami           = "ami-0e8a34246278c21e4"
-key_pair      = "jenkins-server-key"
-subnet_id     = "subnet-04258cda49e304a37"
+ami           = "ami-084a7d336e816906b"
+key_pair      = "nvg"
