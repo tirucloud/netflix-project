@@ -20,6 +20,7 @@ Install the following plugins:
 7. Docker Pipeline
 8. Docker API
 9. docker-build-step
+10. Pipeline: Stage View
 
 ## Step 3: Set up SonarQube
 
