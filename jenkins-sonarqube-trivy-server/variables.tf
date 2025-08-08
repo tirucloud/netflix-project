@@ -18,3 +18,8 @@ variable "key_pair" {
   type        = string
 }
 
+variable "subnet_id" {
+  description = "Subnet ID"
+  type        = string
+  default     = "subnet-013188926843e5ef5"
+}
