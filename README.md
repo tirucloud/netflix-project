@@ -55,10 +55,14 @@ Go to Dashboard -> New Item -> Pipeline
 Use the code below for the Jenkins pipeline. 
 
 ```bash
-pipeline {
+pipeline{
     agent any
+    tools{
+        
+        nodejs 'node16'
+    }
     environment {
-        SCANNER_HOME = tool 'sonar-scanner'
+        SCANNER_HOME=tool 'sonar-scanner'
     }
     stages {
         stage('clean workspace') {
@@ -79,7 +83,18 @@ pipeline {
                 }
             }
         }
-        
+        stage("quality gate"){
+           steps {
+                script {
+                    waitForQualityGate abortPipeline: false, credentialsId: 'Sonar-token'
+                }
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh "npm install"
+            }
+        }
         stage('TRIVY FS SCAN') {
             steps {
                 script {
