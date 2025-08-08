@@ -68,7 +68,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/tirucloud/netflix-project.git'
+                git branch: 'main', url: 'hhttps://github.com/tirucloud/netxflix.git'
             }
         }
         stage("Sonarqube Analysis") {
