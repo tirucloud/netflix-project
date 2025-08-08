@@ -1,4 +1,4 @@
-vpc_id        = "vpc-06fe4f366ed34013b"
+vpc_id        = "vpc-063950911dd26e162"
 instance_type = "t2.large"
 ami           = "ami-084a7d336e816906b"
 key_pair      = "nvg"
